@@ -1,0 +1,180 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Conectadas</title>
+  <link rel="stylesheet" href="styles.css" />
+  <!-- Você pode trocar a fonte para outra que preferir -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap"
+    rel="stylesheet"
+  />
+</head>
+<body>
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="container header-content">
+      <a href="#" class="logo">Conecta<span>das</span></a>
+      <nav class="desktop-nav">
+        <ul>
+          <li><a href="#cursos">Cursos</a></li>
+          <li><a href="#transformacao">Transformação</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </nav>
+      <!-- Botão Hamburger para mobile -->
+      <div class="hamburger" id="hamburger">
+        <span class="line line-1"></span>
+        <span class="line line-2"></span>
+      </div>
+    </div>
+
+    <!-- Menu mobile escondido inicialmente -->
+    <nav class="mobile-nav" id="mobile-nav">
+      <ul>
+        <li><a href="#cursos">Cursos</a></li>
+        <li><a href="#transformacao">Transformação</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+  <div class="hero-content">
+    <div class="hero-left">
+      <h1>Conectadas</h1>
+    </div>
+    <div class="hero-right">
+      <h2>Transforme sua carreira com a gente</h2>
+      <p>Mentorias, cursos e apoio para mulheres na tecnologia.</p>
+      <a href="#cursos" class="btn-primary">Ver Cursos</a>
+    </div>
+  </div>
+</section>
+
+  <!-- SEÇÃO DE CARDS -->
+  <section class="cursos" id="cursos">
+    <div class="container">
+      <h2 class="section-title">Nossos Cursos</h2>
+      <div class="cards-grid">
+        <div class="card">
+          <h3>Curso de Cutilagem</h3>
+          <p>Aprenda técnicas profissionais para cuidar das unhas.</p>
+        </div>
+        <div class="card">
+          <h3>Curso de Sobrancelhas Perfeitas</h3>
+          <p>Descubra como desenhar e preencher sobrancelhas com precisão.</p>
+        </div>
+        <div class="card">
+          <h3>Curso de Maquiagem</h3>
+          <p>Domine as melhores práticas de make para todas as ocasiões.</p>
+        </div>
+        <div class="card">
+          <h3>Universo dos Penteados</h3>
+          <p>Explore estilos criativos e atemporais para todos os cabelos.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ÁREA DE TRANSFORMAÇÃO -->
+  <section class="transformacao" id="transformacao">
+    <div class="container">
+      <div class="transformacao-content">
+        <p class="transformacao-main">
+          mulheres estão tendo suas vidas <span class="highlight">transformadas</span>
+        </p>
+        <a href="#contato" class="btn-secondary">Transforme sua vida</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FORMULÁRIO DE CONTATO -->
+  <section class="contato" id="contato">
+    <div class="container">
+      <h2 class="section-title">Fale Conosco</h2>
+      <form class="contact-form">
+        <div class="form-grid">
+          <div class="form-group">
+            <label for="nome">Nome Completo</label>
+            <input type="text" id="nome" name="nome" required />
+          </div>
+          <div class="form-group">
+            <label for="email">E-mail</label>
+            <input type="email" id="email" name="email" required />
+          </div>
+          <div class="form-group">
+            <label for="cidade">Cidade</label>
+            <input type="text" id="cidade" name="cidade" required />
+          </div>
+          <div class="form-group">
+            <label for="telefone">Telefone</label>
+            <input type="tel" id="telefone" name="telefone" required />
+          </div>
+        </div>
+        <div class="form-group full-width">
+          <label for="mensagem">Mensagem</label>
+          <textarea id="mensagem" name="mensagem" rows="4" required></textarea>
+        </div>
+        <button type="submit" class="btn-primary btn-submit">
+          Enviar Mensagem
+        </button>
+      </form>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <div class="footer-about">
+        <h3>Conectadas</h3>
+        <p>
+          Conectando mulheres a oportunidades no mundo digital. Cursos,
+          treinamentos e muito mais!
+        </p>
+      </div>
+      <div class="footer-links">
+        <h4>Links Úteis</h4>
+        <ul>
+          <li><a href="#cursos">Cursos</a></li>
+          <li><a href="#transformacao">Transformação</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </div>
+      <div class="footer-social">
+        <h4>Siga-nos</h4>
+        <ul>
+          <li><a href="#" aria-label="Facebook">Facebook</a></li>
+          <li><a href="#" aria-label="Instagram">Instagram</a></li>
+          <li><a href="#" aria-label="LinkedIn">LinkedIn</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 Mercado Digital. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <script>
+const hamburger = document.querySelector('.hamburger');
+  const mobileNav = document.querySelector('.mobile-nav');
+
+  hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('active');
+    mobileNav.classList.toggle('open');
+  });
+
+  // Fecha o menu ao clicar em qualquer link
+  document.querySelectorAll('.mobile-nav a').forEach(link => {
+    link.addEventListener('click', () => {
+      hamburger.classList.remove('active');
+      mobileNav.classList.remove('open');
+    });
+  });
+
+  </script>
+</body>
+</html>
